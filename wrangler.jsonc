@@ -14,6 +14,9 @@
   ],
   "vars": {
     "APP_ENV": "development",
-    "PUBLIC_API_BASE_URL": "https://REPLACE_WITH_YOUR_WORKER_DOMAIN"
-  }
+    "PUBLIC_API_BASE_URL": "https://lyrics-kosh-api.YOUR_SUBDOMAIN.workers.dev",
+    "LRCLIB_USER_AGENT": "LyricsKosh/1.1 (https://YOUR_PROJECT_URL; contact: YOUR_EMAIL)",
+    "LRC_RED_USER_AGENT": "LyricsKosh/1.1 (https://YOUR_PROJECT_URL; contact: YOUR_EMAIL)"
+  },
+  "triggers": { "crons": ["*/15 * * * *"] }
 }

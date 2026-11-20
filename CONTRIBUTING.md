@@ -1,49 +1,29 @@
 # Contributing to Lyrics Kosh
 
-Thanks for considering a contribution.
+Thanks for helping improve Lyrics Kosh.
 
-## Before you start
+## Before opening a pull request
 
-1. Check existing issues and discussions to avoid duplicate work.
-2. For substantial changes, open an issue describing the problem and proposed solution.
-3. Never submit API keys, secrets, private contact details, or copyrighted lyrics you do not have permission to contribute.
-4. Check the current terms of any provider you integrate.
+- Explain the problem and the intended behavior.
+- Keep provider-specific code inside `src/providers/`.
+- Keep API response shapes consistent and document breaking changes.
+- Add tests for parsers, matching rules, and route behavior.
+- Never commit secrets, API keys, private lyric dumps, or personal data.
+- Do not add a provider integration until its API terms, attribution, rate limits, and content rights have been reviewed.
 
 ## Development
 
 ```bash
 npm install
-cp .dev.vars.example .dev.vars
+npm run typecheck
+npm test
 npm run dev
 ```
 
-Run checks before opening a pull request:
+## Lyrics and rights
 
-```bash
-npm run typecheck
-npm test
-```
+Only contribute lyrics you created or are authorized to submit. Do not submit scraped or copied copyrighted lyrics without permission. A contributor declaration is not a substitute for a rights review.
 
 ## Pull requests
 
-Please include:
-
-- A clear description of the change.
-- The reason the change is needed.
-- Tests or reproducible verification steps.
-- Any migration or configuration changes.
-- Provider attribution and terms impact, where relevant.
-
-Keep pull requests focused. Avoid committing `.dev.vars`, `.env`, `node_modules`, generated secrets, or unrelated formatting changes.
-
-## Code style
-
-- Use TypeScript strict mode.
-- Prefer small provider adapters behind the shared provider interface.
-- Handle network timeouts and provider failures explicitly.
-- Never allow monitoring or cache failures to break a successful API response.
-- Do not log API keys, authorization headers, raw IP addresses, or full lyric payloads.
-
-## Security reports
-
-Do not publish exploitable security details in a public issue. Contact the maintainers privately through the security contact published in the repository.
+Keep changes focused. Include migration notes when changing D1 schema and update `docs/API.md` when changing public endpoints.

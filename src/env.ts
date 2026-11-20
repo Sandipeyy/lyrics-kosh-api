@@ -6,3 +6,9 @@ export interface Env {
   LRC_RED_USER_AGENT?: string;
   ADMIN_SECRET?: string;
 }
+
+export interface AppVariables {
+  requestId: string;
+  apiKeyId?: string;
+  tier: "anonymous" | "free" | "admin";
+}

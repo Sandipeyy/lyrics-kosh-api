@@ -1,13 +1,6 @@
-[build-system]
-requires = ["setuptools>=68"]
-build-backend = "setuptools.build_meta"
-
 [project]
 name = "lyrics-kosh"
 version = "0.1.0"
-description = "Python client for Lyrics Kosh"
-requires-python = ">=3.10"
-dependencies = ["httpx>=0.27,<1"]
-
-[tool.setuptools.packages.find]
-include = ["lyrics_kosh*"]
+description = "Python client for Lyrics Kosh API"
+requires-python = ">=3.9"
+dependencies = []

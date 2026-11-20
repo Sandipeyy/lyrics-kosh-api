@@ -1,7 +1,10 @@
+import json
 import os
-import requests
+import sys
+from urllib.request import urlopen
+from urllib.parse import quote
 
 base = os.getenv("LYRICS_KOSH_URL", "http://localhost:8787")
-response = requests.get(f"{base}/v1/search", params={"q": "Creep"}, timeout=10)
-response.raise_for_status()
-print(response.json())
+query = " ".join(sys.argv[1:]) or "track artist"
+with urlopen(base + "/v1/search?q=" + quote(query), timeout=15) as response:
+    print(json.dumps(json.loads(response.read()), indent=2))

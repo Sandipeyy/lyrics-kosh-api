@@ -1,3 +1,3 @@
-from .client import LyricsKosh, LyricsKoshError
+from .client import LyricsKosh
 
-__all__ = ["LyricsKosh", "LyricsKoshError"]
+__all__ = ["LyricsKosh"]

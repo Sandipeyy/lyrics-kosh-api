@@ -1,15 +1,17 @@
 {
   "name": "lyrics-kosh-api",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
-  "description": "Independent lyrics discovery API built on Cloudflare Workers.",
   "type": "module",
+  "description": "A provider-agnostic lyrics API built for Cloudflare Workers.",
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "db:local": "wrangler d1 migrations apply lyrics-kosh-db --local",
+    "db:remote": "wrangler d1 migrations apply lyrics-kosh-db --remote"
   },
   "dependencies": {
     "hono": "^4.7.2"
