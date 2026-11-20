@@ -1,0 +1,5 @@
+# Copy this file to .dev.vars for local development.
+# Never commit .dev.vars or real secrets.
+ADMIN_SECRET="replace-with-a-long-random-secret"
+LRCLIB_USER_AGENT="LyricsKosh/1.0.0 (https://github.com/YOUR_GITHUB_USERNAME/lyrics-kosh-api)"
+LRC_RED_USER_AGENT="LyricsKosh/1.0.0 (https://github.com/YOUR_GITHUB_USERNAME/lyrics-kosh-api; contact: YOUR_PUBLIC_CONTACT_EMAIL)"

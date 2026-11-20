@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "lyrics-kosh-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-02-14",
+  "observability": { "enabled": true },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "lyrics-kosh-db",
+      "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "vars": {
+    "APP_ENV": "development",
+    "PUBLIC_API_BASE_URL": "https://REPLACE_WITH_YOUR_WORKER_DOMAIN"
+  }
+}
