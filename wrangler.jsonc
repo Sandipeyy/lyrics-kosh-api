@@ -1,22 +1,27 @@
+
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "lyrics-kosh-api",
   "main": "src/index.ts",
   "compatibility_date": "2025-02-14",
-  "observability": { "enabled": true },
+  "observability": {
+    "enabled": true
+  },
   "d1_databases": [
     {
       "binding": "DB",
       "database_name": "lyrics-kosh-db",
-      "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID",
+      "database_id": "939c73e3-d6aa-4e8e-bddb-f5687165b54c",
       "migrations_dir": "migrations"
     }
   ],
   "vars": {
-    "APP_ENV": "development",
-    "PUBLIC_API_BASE_URL": "https://lyrics-kosh-api.YOUR_SUBDOMAIN.workers.dev",
-    "LRCLIB_USER_AGENT": "LyricsKosh/1.1 (https://YOUR_PROJECT_URL; contact: YOUR_EMAIL)",
-    "LRC_RED_USER_AGENT": "LyricsKosh/1.1 (https://YOUR_PROJECT_URL; contact: YOUR_EMAIL)"
+    "APP_ENV": "production",
+    "PUBLIC_API_BASE_URL": "https://lyrics-kosh-api.977senpai.workers.dev",
+    "LRCLIB_USER_AGENT": "LyricsKosh/1.1 (https://github.com/Sandipeyy/lyrics-kosh-api)",
+    "LRC_RED_USER_AGENT": "LyricsKosh/1.1 (https://github.com/Sandipeyy/lyrics-kosh-api)"
   },
-  "triggers": { "crons": ["*/15 * * * *"] }
+  "triggers": {
+    "crons": ["*/15 * * * *"]
+  }
 }
